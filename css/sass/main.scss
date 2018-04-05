@@ -1,0 +1,182 @@
+//Variables
+$main-header-font: 'Montserrat', sans-serif;
+$sub-header-font: 'Kaushan Script', cursive;
+/* main block */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./../../images/main/main-background.png);
+    background-size: cover;
+    color:white;
+
+    /* gradient background for main block */
+    .main-background {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+        opacity: .9;
+
+        .main-inner {
+            width: 1000px;
+            height: 100vh;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* wrapper for navigation panel */
+.nav-bar-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-family: $main-header-font;
+    height: 50px;
+
+    /* page title */
+    .title {
+        font-size:30px;
+        font-weight: bold;
+    }
+
+    /* navigation panel with links */
+    .nav-bar {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        /* navigation links */
+        .nav-bar-list {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            .nav-bar-link{
+                margin-left: 30px;
+                text-transform: uppercase;
+                position: relative;
+
+                .link-underline {
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #fce38a;
+                    bottom: -10px;
+                    left: 0;
+                    transition: .3s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                a {
+                    display: block;
+                    font-size:14px;
+                }
+
+                //On hover actions
+                a:hover {
+                    color: #fce38a;
+                    cursor: pointer;
+                }
+
+                a:hover + .link-underline {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .nav-bar-link:first-child {
+                margin-left: 0;
+            }
+        }
+        .shopping-bucket, .search-button {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+/* greeting */
+.greeting-wrapper {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    width: 800px;
+
+    /* sub-greeting with cursive text */
+    .sub-greeting {
+        font-family: $sub-header-font;
+        font-size: 62px;
+    }
+
+    /* main greeting with bold text */
+    .main-greeting {
+        margin-top: 42px;
+        font-family: $main-header-font;
+        font-weight: 700;
+        font-size: 130px;
+        text-transform: uppercase;
+    }
+}
+
+/* Button 'learn more', divider between button and greeting */
+.learn-more-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+
+    /* divider */
+    .divider {
+        margin: 0 auto;
+        height: 3px;
+        width: 50px;
+    }
+
+    .white {
+        background-color: #fff;
+    }
+
+    .learn-more {
+        margin: 50px auto 0;
+        border: 4px solid #fff;
+        display: inline-flex;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+
+        /* button 'learn more' */
+        a:link, a:visited {
+            color: white;
+            text-decoration: none;
+            font-family: $main-header-font;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* progress bar */
+.progress-bar {
+    margin: 0 auto;
+    margin-top:50px;
+    font-family: $main-header-font;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    .progress-lines-list {
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+
+        .progress-line {
+            background-color: #fff;
+            width: 200px;
+            height: 3px;
+            margin-bottom:10px;
+        }
+    }
+}

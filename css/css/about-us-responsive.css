@@ -1,0 +1,26 @@
+@media (max-width: 450px) {
+  .about-us-content .about-us-images-container {
+    flex-flow: column wrap; }
+    .about-us-content .about-us-images-container .about-us-image-wrapper:nth-of-type(n) {
+      margin-bottom: 20px;
+      margin-right: 0; }
+  .about-us-content .infographic .achievment-wrapper {
+    width: 80%;
+    flex-flow: row wrap;
+    height: 250px; }
+    .about-us-content .infographic .achievment-wrapper .achievment .number {
+      font-size: 68px; }
+    .about-us-content .infographic .achievment-wrapper .achievment:nth-of-type(3n) {
+      border-right: 1px solid white; } }
+@media (min-width: 500px) and (max-width: 800px) {
+  .about-us-content .about-us-images-container {
+    flex-flow: row wrap; }
+    .about-us-content .about-us-images-container .about-us-image-wrapper:nth-of-type(n) {
+      margin-bottom: 20px; }
+  .about-us-content .infographic .achievment-wrapper {
+    width: 80%;
+    flex-flow: row wrap; }
+    .about-us-content .infographic .achievment-wrapper .achievment .number {
+      font-size: 68px; } }
+
+/*# sourceMappingURL=about-us-responsive.css.map */

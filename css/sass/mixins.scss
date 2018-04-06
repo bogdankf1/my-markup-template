@@ -1,0 +1,31 @@
+//Mixins for vendor prefixes
+
+// For 'transform'
+@mixin transform($transform-value) {
+    -webkit-transform: $transform-value;
+    -moz-transform: $transform-value;
+    -ms-transform: $transform-value;
+    -o-transform: $transform-value;
+    transform: $transform-value;
+}
+
+// For 'flexbox'
+@mixin justify-content($justify-value) {
+    -webkit-justify-content: $justify-value;
+    -moz-justify-content: $justify-value;
+    justify-content: $justify-value;
+}
+@mixin flex-direction($flex-direction-value) {
+    -webkit-flex-direction: $flex-direction-value;
+    -moz-flex-direction: $flex-direction-value;
+    flex-direction: $flex-direction-value;
+}
+@mixin flex-flow($flex-flow-value) {
+    -webkit-flex-flow: $flex-flow-value;
+    -moz-flex-flow: $flex-flow-value;
+    flex-flow: $flex-flow-value;
+}
+@mixin align-items($align-items-value) {
+    -webkit-align-items: $align-items-value;
+    align-items: $align-items-value;
+}

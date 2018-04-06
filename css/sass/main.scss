@@ -1,7 +1,9 @@
 //Variables
 $main-header-font: 'Montserrat', sans-serif;
 $sub-header-font: 'Kaushan Script', cursive;
-/* main block */
+$text-content-font: 'Roboto', sans-serif;
+
+/* main section */
 .main {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@ $sub-header-font: 'Kaushan Script', cursive;
     height: 100vh;
     background-image: url(./../../images/main/main-background.png);
     background-size: cover;
+    background-position:center; 
     color:white;
 
     /* gradient background for main block */
@@ -18,10 +21,12 @@ $sub-header-font: 'Kaushan Script', cursive;
         background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
         opacity: .9;
 
+        // main page inner container
         .main-inner {
-            width: 1000px;
+            width: 90%;
             height: 100vh;
             margin: 0 auto;
+            position: relative;
         }
     }
 }
@@ -29,13 +34,13 @@ $sub-header-font: 'Kaushan Script', cursive;
 /* wrapper for navigation panel */
 .nav-bar-wrapper {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     margin-top: 20px;
     font-family: $main-header-font;
     height: 50px;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
-    /* page title */
+    /* main page title */
     .title {
         font-size:30px;
         font-weight: bold;
@@ -53,11 +58,13 @@ $sub-header-font: 'Kaushan Script', cursive;
             flex-flow: row wrap;
             align-items: center;
 
+            // navigation link
             .nav-bar-link{
                 margin-left: 30px;
                 text-transform: uppercase;
                 position: relative;
 
+                // underline for nav link
                 .link-underline {
                     position: absolute;
                     width: 100%;
@@ -65,31 +72,36 @@ $sub-header-font: 'Kaushan Script', cursive;
                     background-color: #fce38a;
                     bottom: -10px;
                     left: 0;
-                    transition: .3s ease;
                     opacity: 0;
                     visibility: hidden;
+                    transition: .3s ease;
                 }
 
+                // link text
                 a {
                     display: block;
                     font-size:14px;
                 }
 
-                //On hover actions
+                //On hover actions:
+                // change link color
                 a:hover {
                     color: #fce38a;
                     cursor: pointer;
                 }
 
+                // show underline for link
                 a:hover + .link-underline {
                     opacity: 1;
                     visibility: visible;
                 }
             }
+            // remove left margin from the first link
             .nav-bar-link:first-child {
                 margin-left: 0;
             }
         }
+        // margin for bucket and search
         .shopping-bucket, .search-button {
             margin-left: 15px;
         }
@@ -136,10 +148,12 @@ $sub-header-font: 'Kaushan Script', cursive;
         width: 50px;
     }
 
+    // custom color for divider
     .white {
         background-color: #fff;
     }
 
+    // 'learn-more' button container
     .learn-more {
         margin: 50px auto 0;
         border: 4px solid #fff;
@@ -161,22 +175,29 @@ $sub-header-font: 'Kaushan Script', cursive;
 
 /* progress bar */
 .progress-bar {
-    margin: 0 auto;
-    margin-top:50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
     font-family: $main-header-font;
     text-transform: uppercase;
     font-weight: bold;
 
+    // list of progress lines
     .progress-lines-list {
         display:flex;
-        flex-flow:row wrap;
+        flex-flow: row wrap;
         justify-content: space-between;
 
-        .progress-line {
-            background-color: #fff;
-            width: 200px;
-            height: 3px;
-            margin-bottom:10px;
+        li {
+            width: 22%;
+
+            // progress list line
+            .progress-line {
+                background-color: #fff;
+                height: 3px;
+                margin-bottom:10px;
+            }
         }
     }
 }

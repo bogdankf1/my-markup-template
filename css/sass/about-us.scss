@@ -1,8 +1,4 @@
-//Variables
-$main-header-font: 'Montserrat', sans-serif;
-$sub-header-font: 'Kaushan Script', cursive;
-$text-content-font: 'Roboto', sans-serif;
-
+// header that same for each page
 .header {
     /* Headers */
     .header-inner {
@@ -10,11 +6,13 @@ $text-content-font: 'Roboto', sans-serif;
         margin-bottom:30px;
         text-align: center;
 
+        // sub-header with cursive font
         .sub-header {
             font: 24px $sub-header-font;
             color:#333333;
         }
         
+        // main-header with bold font
         .main-header {
             margin-top: 10px;
             font: bold 30px $main-header-font;
@@ -30,20 +28,24 @@ $text-content-font: 'Roboto', sans-serif;
         width: 50px;
     }
 
+    // custom color for divider
     .red {
         background-color: red;
     }
 }
+
+// section 'about-us'
 .about-us {
     display:flex;
-    flex-flow: column nowrap;
     text-align: center;
     width: 100%;
+    flex-flow: column nowrap;
 
+    // all content in 'about-us' section
     .about-us-content {
         /* Text content */
         .text-content {
-            width: 800px;
+            width: 70%;
             font: 15px $text-content-font;
             color: #999999;
             margin: 30px auto;
@@ -52,22 +54,24 @@ $text-content-font: 'Roboto', sans-serif;
     
         /* Image content */
         .about-us-images-container {
-            width: 900px;
+            width: 80%;
             display: flex;
-            flex-flow: row wrap;
             margin: 0 auto;
             margin-bottom: 50px;
-    
+            
+            // wrapper for each image in 'about-us' section
             .about-us-image-wrapper {
                 flex: 1;
                 margin-right: 20px;
                 height: 200px; 
-                transition: .6s ease;
-    
+                transition:.6s ease;
+                
+                // settings for image 
                 .about-us-image-settings {
                     height: 200px;
                     background-size: cover;
                 }
+                // set each image
                 .about-us-image-1 {
                     background-image: url(./../../images/about-us/layer-44.png);
                 }
@@ -78,32 +82,35 @@ $text-content-font: 'Roboto', sans-serif;
                     background-image: url(./../../images/about-us/layer-41.png);
                 }
             }
+            // remove right margin from the last image in container
             .about-us-image-wrapper:last-of-type {
                 margin-right: 0;  
             }
     
-            /*image hover animation */
+            /* on hover actions: */
+            // move image on hover,
             .about-us-image-wrapper:hover {
-                transform:translate(-10px, -10px);
+                transform: translate(-10px, -10px);
             }
+            // show cover
             .about-us-image-wrapper:hover .about-us-image-cover {
                 visibility: visible;
                 opacity: .9;
             }
+            // and show background
             .about-us-image-wrapper:hover .about-us-image-background {
                 visibility: visible;
                 opacity: 1;
-                transform:translate(10px, 10px);
+                transform: translate(10px, 10px);
             }
         }
     }
 }
 
-
-
-
+// each image in 'about-us-images-container'
 .about-us-image {
     position: relative; 
+    // cover for each image
     .about-us-image-cover {
         position: absolute;
         left: 0;
@@ -112,14 +119,16 @@ $text-content-font: 'Roboto', sans-serif;
         height: 100%;
         background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
         display: flex;
-        align-items: center;
         opacity: 0;
         visibility: hidden;
         transition: .6s ease;
+        align-items: center;
 
+        // cover inner
         .image-cover-inner {
             flex:1;
 
+            // logo on cover
             .image-cover-logo {
                 background-image: url(./../../images/about-us/users.png);
                 width: 32px;
@@ -127,6 +136,8 @@ $text-content-font: 'Roboto', sans-serif;
                 margin: 0 auto;
                 background-repeat: no-repeat;
             }
+
+            // text descrition on cover
             .image-cover-description {
                 color: white;
                 text-transform: uppercase;
@@ -135,6 +146,7 @@ $text-content-font: 'Roboto', sans-serif;
         }
     }
 
+    // image background
     .about-us-image-background {
         position: absolute;
         left: 0;
@@ -150,31 +162,36 @@ $text-content-font: 'Roboto', sans-serif;
 }
 
 
-/* Infographic content*/
+/* Infographic content (from 'about-us-content')*/
 .infographic {
     margin: 0 auto;
     background-color: #95e1d3;
 
+    // each item of infographic container
     .achievment-wrapper {
         width: 900px;
         height: 150px;
-        align-items: center;
         display: flex;
         margin: 0 auto;
 
+        // achievement
         .achievment {
             flex: 1;
             color: white;
             border-left:1px solid white;
 
+            // achievement number,
             .number {
-                font: bold 72px 'Montserrat', sans-serif;
+                font: bold 72px $main-header-font;
             }
+
+            // and it's description
             .title {
-                font: 14px 'Montserrat', sans-serif;
+                font: 14px $main-header-font;
                 text-transform: uppercase;
             }
         }
+        // set border for the last achievment in infographic
         .achievment:last-of-type {
             border-right:1px solid white;
         }

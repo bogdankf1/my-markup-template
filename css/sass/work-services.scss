@@ -1,79 +1,81 @@
-//Variables
-$main-header-font: 'Montserrat', sans-serif;
-$text-content-font: 'Roboto', sans-serif;
-
 //Services section
 .work-services {
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
 
+    // container for services
     .services-container {
         display: flex;
-        flex-flow:row wrap;
         margin-top: 25px;
         margin-bottom: 100px;
-    }
+        flex-flow:row wrap;
 
-    .service-wrapper {
-        margin-top: 25px;
-        margin-right: 30px;
-        width: 280px;
-        display: flex;
-        flex-flow: row nowrap;
+        // wrapper for each service
+        .service-wrapper {
+            margin-top: 25px;
+            margin-right: 30px;
+            width: 30%;
+            display: flex;
+            flex-flow:row wrap;
 
-        // Service icon
-        .service-icon {
-            flex: 1;
-        }
-        .service-icon-settings {
-            height: 32px;
-            width: 32px;
-            background-repeat: no-repeat;
-        }
-        .service-icon-1 {
-            background-image: url(./../../images/work-services/alarm.png);
-        }
-        .service-icon-2 {
-            background-image: url(./../../images/work-services/line-graph.png);
-        }
-        .service-icon-3 {
-            background-image: url(./../../images/work-services/computer.png);
-        }
-        .service-icon-4 {
-            background-image: url(./../../images/work-services/book.png);
-        }
-        .service-icon-5 {
-            background-image: url(./../../images/work-services/home.png);
-        }
-        .service-icon-6 {
-            background-image: url(./../../images/work-services/image.png);
-        }
-
-        // Service description
-        .service-description-wrapper {
-            flex: 5;
-
-            // Service title
-            .service-title {
-                font: bold 14px $main-header-font;
-                text-transform: uppercase;
+            // Service icon
+            .service-icon {
+                flex: 1;
+            }
+            // service settings
+            .service-icon-settings {
+                height: 32px;
+                width: 32px;
+                background-repeat: no-repeat;
+            }
+            // set each service icon
+            .service-icon-1 {
+                background-image: url(./../../images/work-services/alarm.png);
+            }
+            .service-icon-2 {
+                background-image: url(./../../images/work-services/line-graph.png);
+            }
+            .service-icon-3 {
+                background-image: url(./../../images/work-services/computer.png);
+            }
+            .service-icon-4 {
+                background-image: url(./../../images/work-services/book.png);
+            }
+            .service-icon-5 {
+                background-image: url(./../../images/work-services/home.png);
+            }
+            .service-icon-6 {
+                background-image: url(./../../images/work-services/image.png);
             }
 
-            // Service description text
-            .service-description {
-                margin-top: 10px;
-                font: 15px $text-content-font;
-                color: #999999;
+            // Service description
+            .service-description-wrapper {
+                flex: 5;
+
+                // Service title
+                .service-title {
+                    font: bold 14px $main-header-font;
+                    text-transform: uppercase;
+                }
+
+                // Service description text
+                .service-description {
+                    margin-top: 10px;
+                    font: 15px $text-content-font;
+                    color: #999999;
+                }
             }
         }
-    }
-    .service-wrapper:nth-of-type(3n) {
-        margin-right: 0;
-    }
-    .services-divider {
-        margin-top: 25px;
-        height: 1px;
-        width: 100%;
-        background-color: #e5e5e5
+        // remove right margin from the last service in row 
+        .service-wrapper:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        // divider between rows of services
+        .services-divider {
+            margin-top: 25px;
+            height: 1px;
+            width: 100%;
+            background-color: #e5e5e5
+        }
     }
 }

@@ -1,130 +1,98 @@
-.header {
-  /* Headers */
-  /* divider */ }
-  .header .header-inner {
-    margin: 50px 0;
-    margin-bottom: 30px;
-    text-align: center; }
-    .header .header-inner .sub-header {
-      font: 24px "Kaushan Script", cursive;
-      color: #333333; }
-    .header .header-inner .main-header {
-      margin-top: 10px;
-      font: bold 30px "Montserrat", sans-serif;
-      text-transform: uppercase;
-      color: #333333; }
-  .header .divider {
-    margin: 0 auto;
-    height: 3px;
-    width: 50px; }
-  .header .red {
-    background-color: red; }
+/*
+Error: Undefined variable: "$sub-header-font".
+        on line 11 of sass/about-us.scss
 
-.about-us {
-  display: flex;
-  flex-flow: column nowrap;
-  text-align: center;
-  width: 100%; }
-  .about-us .about-us-content {
-    /* Text content */
-    /* Image content */ }
-    .about-us .about-us-content .text-content {
-      width: 800px;
-      font: 15px "Roboto", sans-serif;
-      color: #999999;
-      margin: 30px auto;
-      margin-bottom: 50px; }
-    .about-us .about-us-content .about-us-images-container {
-      width: 900px;
-      display: flex;
-      flex-flow: row wrap;
-      margin: 0 auto;
-      margin-bottom: 50px;
-      /*image hover animation */ }
-      .about-us .about-us-content .about-us-images-container .about-us-image-wrapper {
-        flex: 1;
-        margin-right: 20px;
-        height: 200px;
-        transition: .6s ease; }
-        .about-us .about-us-content .about-us-images-container .about-us-image-wrapper .about-us-image-settings {
-          height: 200px;
-          background-size: cover; }
-        .about-us .about-us-content .about-us-images-container .about-us-image-wrapper .about-us-image-1 {
-          background-image: url(./../../images/about-us/layer-44.png); }
-        .about-us .about-us-content .about-us-images-container .about-us-image-wrapper .about-us-image-2 {
-          background-image: url(./../../images/about-us/layer-39.png); }
-        .about-us .about-us-content .about-us-images-container .about-us-image-wrapper .about-us-image-3 {
-          background-image: url(./../../images/about-us/layer-41.png); }
-      .about-us .about-us-content .about-us-images-container .about-us-image-wrapper:last-of-type {
-        margin-right: 0; }
-      .about-us .about-us-content .about-us-images-container .about-us-image-wrapper:hover {
-        transform: translate(-10px, -10px); }
-      .about-us .about-us-content .about-us-images-container .about-us-image-wrapper:hover .about-us-image-cover {
-        visibility: visible;
-        opacity: .9; }
-      .about-us .about-us-content .about-us-images-container .about-us-image-wrapper:hover .about-us-image-background {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(10px, 10px); }
+6:         margin-bottom:30px;
+7:         text-align: center;
+8: 
+9:         // sub-header with cursive font
+10:         .sub-header {
+11:             font: 24px $sub-header-font;
+12:             color:#333333;
+13:         }
+14:         
+15:         // main-header with bold font
+16:         .main-header {
 
-.about-us-image {
-  position: relative; }
-  .about-us-image .about-us-image-cover {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: .6s ease; }
-    .about-us-image .about-us-image-cover .image-cover-inner {
-      flex: 1; }
-      .about-us-image .about-us-image-cover .image-cover-inner .image-cover-logo {
-        background-image: url(./../../images/about-us/users.png);
-        width: 32px;
-        height: 24px;
-        margin: 0 auto;
-        background-repeat: no-repeat; }
-      .about-us-image .about-us-image-cover .image-cover-inner .image-cover-description {
-        color: white;
-        text-transform: uppercase;
-        font: bold 18px 'Montserrat', sans-serif; }
-  .about-us-image .about-us-image-background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: #95e1d3;
-    visibility: hidden;
-    opacity: 0;
-    transition: .6s ease; }
-
-/* Infographic content*/
-.infographic {
-  margin: 0 auto;
-  background-color: #95e1d3; }
-  .infographic .achievment-wrapper {
-    width: 900px;
-    height: 150px;
-    align-items: center;
-    display: flex;
-    margin: 0 auto; }
-    .infographic .achievment-wrapper .achievment {
-      flex: 1;
-      color: white;
-      border-left: 1px solid white; }
-      .infographic .achievment-wrapper .achievment .number {
-        font: bold 72px 'Montserrat', sans-serif; }
-      .infographic .achievment-wrapper .achievment .title {
-        font: 14px 'Montserrat', sans-serif;
-        text-transform: uppercase; }
-    .infographic .achievment-wrapper .achievment:last-of-type {
-      border-right: 1px solid white; }
-
-/*# sourceMappingURL=about-us.css.map */
+Backtrace:
+sass/about-us.scss:11
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/node.rb:50:in `perform'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/list_literal.rb:75:in `map'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/node.rb:50:in `perform'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/home/user/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$sub-header-font\".\A         on line 11 of sass/about-us.scss\A \A 6:         margin-bottom:30px;\A 7:         text-align: center;\A 8: \A 9:         // sub-header with cursive font\A 10:         .sub-header {\A 11:             font: 24px $sub-header-font;\A 12:             color:#333333;\A 13:         }\A 14:         \A 15:         // main-header with bold font\A 16:         .main-header {"; }

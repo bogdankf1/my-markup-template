@@ -36,6 +36,21 @@
                             </ul>
                             <div class="shopping-bucket"><img src="images/main/shopping-cart.png"></div>
                             <div class="search-button"><img src="images/main/magnifying-glass.png"></div>
+                            
+                            <div id="mobile-nav-menu" class="mobile-nav-menu">
+                                <div class="mobile-menu-icon">
+                                    <img src="images/main/mobile-menu.png">
+                                </div>
+                                <div id="mobile-menu-content" class="mobile-menu-content">
+                                    <a href="#">About</a>
+                                    <a href="#">Service</a>
+                                    <a href="#">Work</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">Contact</a>
+                                </div>
+                                <div id="mobile-menu-background" class="mobile-menu-background"></div>
+                            </div>
+                            
                         </div>
                     </header>
                     <div class="greeting-wrapper">
@@ -56,8 +71,7 @@
                             <li><div class="progress-line"></div>04 Contacts</li>
                         </ul>
                     </div>
-                </div>
-                
+                </div>   
             </div>
         </section>
         <section class="about-us">
@@ -228,5 +242,20 @@
             </div>
         </section>
     </div>
+
+    <script>
+        let menuOpened = false
+        document.getElementById('mobile-nav-menu').addEventListener('click', (e) => {
+            if(!menuOpened) {
+                document.getElementById('mobile-menu-content').style = 'display:block'
+                document.getElementById('mobile-menu-background').style = 'display:block'
+                menuOpened = true
+            } else if(menuOpened || e.target.id === 'mobile-menu-background'){
+                document.getElementById('mobile-menu-content').style = 'display:none'
+                document.getElementById('mobile-menu-background').style = 'display:none'
+                menuOpened = false
+            }    
+        })
+    </script>
 </body>
 </html>

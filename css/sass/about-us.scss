@@ -179,14 +179,20 @@
             flex: 1;
             color: white;
             border-left:1px solid white;
+            display: flex;
+            flex-direction: column;
 
             // achievement number,
             .number {
+                flex: 1;
                 font: bold 72px $main-header-font;
             }
 
             // and it's description
             .title {
+                flex:1;
+                width: 90%;
+                margin: 0 auto;
                 font: 14px $main-header-font;
                 text-transform: uppercase;
             }

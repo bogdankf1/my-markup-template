@@ -15,17 +15,24 @@
         .infographic {
             .achievment-wrapper {
                 width: 80%;
-                flex-flow: row wrap;
-                height: 250px;
+                flex-flow: column wrap;
+                height: 300px;
 
                 .achievment {
-                    .number {
-                        font-size: 68px;
-                    }
-                }
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    border: none;
+                    border-bottom: 1px solid white;
 
-                .achievment:nth-of-type(3n) {
-                    border-right:1px solid white;
+                    .number {
+                        font-size: 40px;
+                        flex:1;
+                    }
+
+                    .title {
+                        flex:4;
+                    }
                 }
             }
         }
@@ -61,5 +68,18 @@
 
 // For album-orientation
 @media (max-width:850px) and (max-height:450px) {
-
+    .about-us-content {
+        .infographic {
+            .achievment-wrapper {
+                width: 80%;
+                flex-flow: row wrap;
+                
+                .achievment {
+                    .number {
+                        font-size: 54px;
+                    }
+                }
+            }
+        }
+    }
 }

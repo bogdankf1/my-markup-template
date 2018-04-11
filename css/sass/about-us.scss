@@ -40,12 +40,13 @@
     text-align: center;
     width: 100%;
     flex-flow: column nowrap;
+    padding: 0 100px;
 
     // all content in 'about-us' section
     .about-us-content {
         /* Text content */
         .text-content {
-            width: 70%;
+            padding: 0 50px;
             font: 15px $text-content-font;
             color: #999999;
             margin: 30px auto;
@@ -54,7 +55,7 @@
     
         /* Image content */
         .about-us-images-container {
-            width: 80%;
+            
             display: flex;
             margin: 0 auto;
             margin-bottom: 50px;
@@ -62,8 +63,7 @@
             // wrapper for each image in 'about-us' section
             .about-us-image-wrapper {
                 flex: 1;
-                margin-right: 20px;
-                height: 200px; 
+                padding-right: 20px;
                 transition:.6s ease;
                 
                 // settings for image 
@@ -169,9 +169,11 @@
 
     // each item of infographic container
     .achievment-wrapper {
-        width: 900px;
+        width: 90%;
         height: 150px;
         display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
         margin: 0 auto;
 
         // achievement
@@ -181,17 +183,17 @@
             border-left:1px solid white;
             display: flex;
             flex-direction: column;
+            justify-content: center;
 
-            // achievement number,
+            // achievement number, ...
             .number {
-                flex: 1;
                 font: bold 72px $main-header-font;
             }
 
-            // and it's description
+            // ... and it's description
             .title {
-                flex:1;
-                width: 90%;
+                height: 50px;
+                padding: 0 10px;
                 margin: 0 auto;
                 font: 14px $main-header-font;
                 text-transform: uppercase;

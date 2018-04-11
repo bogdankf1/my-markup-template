@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 /* main section */
 .main {
   display: flex;
@@ -32,7 +35,9 @@
   /* navigation panel with links */ }
   .nav-bar-wrapper .title {
     font-size: 30px;
-    font-weight: bold; }
+    font-weight: bold;
+    display: flex;
+    align-items: center; }
   .nav-bar-wrapper .nav-bar {
     display: flex;
     flex-flow: row wrap;
@@ -76,28 +81,44 @@
       display: inline-block;
       opacity: 0; }
       .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-icon {
+        height: 25px;
+        width: 25px;
         margin-left: 25px; }
+        .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-icon .menu-icon-line {
+          height: 2px;
+          margin-top: 5px;
+          background-color: #fff; }
       .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-icon:hover {
         cursor: pointer; }
       .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-content {
-        display: none;
         position: fixed;
+        top: 0;
         right: 0;
         background-color: #f9f9f9;
-        min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1; }
+        z-index: 50;
+        height: 100%;
+        overflow-x: hidden;
+        transition: .5s; }
+        .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-content .menu-header {
+          color: black;
+          font-size: 32px;
+          font-weight: bold;
+          margin: 15px auto;
+          text-align: center;
+          transition: .3s; }
         .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-content a {
           color: black;
           font-size: 24px;
           padding: 12px 16px;
           text-decoration: none;
           display: block;
-          border-bottom: 1px solid #b8b8b8; }
+          border-bottom: 1px solid #b8b8b8;
+          margin-top: 20px;
+          transition: .3s; }
         .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-content a:hover {
           background-color: #f1f1f1; }
       .nav-bar-wrapper .nav-bar .mobile-nav-menu .mobile-menu-background {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -172,5 +193,23 @@
         background-color: #fff;
         height: 3px;
         margin-bottom: 10px; }
+
+.show-mobile-menu {
+  width: 80%; }
+
+.hide-mobile-menu {
+  width: 0%; }
+
+.show-mobile-menu-background {
+  display: block; }
+
+.hide-mobile-menu-background {
+  display: none; }
+
+.prevent-screen-scroll {
+  overflow: hidden; }
+
+.allow-screen-scroll {
+  overflow: visible; }
 
 /*# sourceMappingURL=main.css.map */

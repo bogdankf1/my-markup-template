@@ -3,6 +3,10 @@ $main-header-font: 'Montserrat', sans-serif;
 $sub-header-font: 'Kaushan Script', cursive;
 $text-content-font: 'Roboto', sans-serif;
 
+* {
+    box-sizing: border-box;
+}
+
 /* main section */
 .main {
     display: flex;
@@ -44,6 +48,8 @@ $text-content-font: 'Roboto', sans-serif;
     .title {
         font-size:30px;
         font-weight: bold;
+        display: flex;
+        align-items: center;
     }
 
     /* navigation panel with links */
@@ -114,22 +120,48 @@ $text-content-font: 'Roboto', sans-serif;
             display: inline-block;
             opacity: 0;
 
+            // icon for mobile menu
             .mobile-menu-icon {
+                height: 25px;
+                width: 25px;
                 margin-left: 25px;
+
+                // each line in menu icon
+                .menu-icon-line {
+                    height: 2px;
+                    margin-top:5px;
+                    background-color: #fff;
+                }
             }
+
+            // on hover action:
             .mobile-menu-icon:hover {
                 cursor: pointer;
             }
 
+            // menu list
             .mobile-menu-content {
-                display: none;
                 position: fixed;
+                top: 0;
                 right: 0;
                 background-color: #f9f9f9;
-                min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
+                z-index: 50;
+                height: 100%;
+                overflow-x: hidden;
+                transition: .5s;
 
+                // mobile menu header
+                .menu-header {
+                    color: black;
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin: 15px auto;
+                    text-align: center;
+                    transition: .3s;
+                }
+
+                // each element in menu list
                 a {
                     color: black;
                     font-size:24px;
@@ -137,23 +169,25 @@ $text-content-font: 'Roboto', sans-serif;
                     text-decoration: none;
                     display: block;
                     border-bottom: 1px solid #b8b8b8;
+                    margin-top: 20px;
+                    transition: .3s;
                 }
+
+                // on hover action:
                 a:hover {
                     background-color: #f1f1f1;
                 }
             }
 
+            // make background darker when menu is opened
             .mobile-menu-background  {
-                display: none;
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.541);
-                
             }
-            
         }
     }
 }
@@ -238,6 +272,7 @@ $text-content-font: 'Roboto', sans-serif;
         flex-flow: row wrap;
         justify-content: space-between;
 
+        // progress bar item
         li {
             width: 22%;
 
@@ -249,4 +284,31 @@ $text-content-font: 'Roboto', sans-serif;
             }
         }
     }
+}
+
+
+// adding classes for mobile menu
+.show-mobile-menu {
+    width: 80%;
+    
+}
+
+.hide-mobile-menu {
+    width: 0%;
+}
+
+.show-mobile-menu-background {
+    display: block;
+}
+
+.hide-mobile-menu-background {
+    display: none;
+}
+
+.prevent-screen-scroll {
+    overflow: hidden;
+}
+
+.allow-screen-scroll {
+    overflow: visible;
 }

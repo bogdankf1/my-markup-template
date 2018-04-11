@@ -1,101 +1,25 @@
-
-// For smartphones
-@media (max-width:450px) {
-    .nav-bar-wrapper {
-        flex:1;
-
-        .nav-bar {
-            .nav-bar-list {
-                display:none;
-            }
-
-            .mobile-nav-menu {
-                opacity: 1;
-            }
-        }
-
-
-    }
-
+// For large tablets and laptops
+@media (min-width:768px) and (max-width:1300px) {
     .greeting-wrapper {
         width: 80%;
-        flex:4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin-top:150px;
         margin-bottom: 50px;
-        
+
         .sub-greeting {
-            font-size: 26px;
-            margin-top:100px;
+            font-size: 46px;
         }
 
         .main-greeting {
-            font-size: 30px;
+            font-size: 50px;
         }
-    }
-
-    .learn-more-wrapper {
-        flex: 1;
-        margin-bottom: 80px;
-    }
-
-    .progress-bar {
-        display: none;
     }
 }
 
 // For tablets
-@media (min-width:450px) and (max-width:768px) {
+@media (min-width:450px) and (max-width:767px) {
     .main-inner {
         position: relative;
     }
-    .nav-bar-wrapper {
-        flex:1;
-    }
-
-    .greeting-wrapper {
-        width: 80%;
-        flex:4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-
-        .sub-greeting {
-            font-size: 36px;
-            margin-top:150px;
-        }
-
-        .main-greeting {
-            font-size: 40px;
-        }
-    }
-
-    .learn-more-wrapper {
-        flex: 1;
-        margin-bottom: 80px;
-    }
-}
-
-@media (max-width:1024px) {
-    .greeting-wrapper {
-        width: 80%;
-        margin-bottom: 50px;
-
-        .sub-greeting {
-            font-size: 36px;
-            margin-top:150px;
-        }
-
-        .main-greeting {
-            font-size: 40px;
-        }
-    }
-}
-
-// For album-orientation
-@media (max-width:850px) and (max-height:450px) {
 
     .nav-bar-wrapper {
         .nav-bar {
@@ -108,15 +32,94 @@
             }
         }
     }
-    
+
     .greeting-wrapper {
         width: 80%;
-        margin:0 auto;
+        margin-top:100px;
         margin-bottom: 50px;
 
         .sub-greeting {
+            font-size: 36px; 
+        }
+
+        .main-greeting {
+            font-size: 40px;
+        }
+    }
+
+    .learn-more-wrapper {
+        margin-bottom: 80px;
+    }
+
+    .progress-bar {
+        display: none;
+    }
+}
+
+// For smartphones
+@media (min-width:321px) and (max-width:449px) {
+    .nav-bar-wrapper {
+        .nav-bar {
+            .nav-bar-list {
+                display:none;
+            }
+
+            .mobile-nav-menu {
+                opacity: 1;
+            }
+        }
+    }
+
+    .greeting-wrapper {
+        width: 80%;
+        margin-top:100px;
+        margin-bottom: 50px;
+        
+        .sub-greeting {
             font-size: 26px;
-            margin-top: 0;
+        }
+
+        .main-greeting {
+            font-size: 30px;
+        }
+    }
+
+    .learn-more-wrapper {
+        flex: 1;
+        margin-bottom: 80px;
+    }
+
+    .progress-bar {
+        display: none;
+    }
+}
+
+
+// For small mobile screens
+@media (max-width:320px) {
+    .nav-bar-wrapper {
+        .title {
+            font-size: 25px;
+        }
+
+        .nav-bar {
+            .nav-bar-list {
+                display:none;
+            }
+
+            .mobile-nav-menu {
+                opacity: 1;
+            }
+        }
+    }
+
+    .greeting-wrapper {
+        width: 80%;
+        margin-top:50px;
+        margin-bottom: 50px;
+        
+        .sub-greeting {
+            font-size: 26px;
         }
 
         .main-greeting {
@@ -126,5 +129,35 @@
 
     .progress-bar {
         display: none;
+    }
+}
+
+// For smartphones in album-orientation
+@media (max-height:650px) {
+    .greeting-wrapper {
+        margin-top: 100px;
+        .sub-greeting {
+            font-size: 30px;
+        }
+
+        .main-greeting {
+            font-size: 40px;
+        }
+    }
+}
+@media (max-height:450px) {
+    .greeting-wrapper {
+        width: 80%;
+        margin:0 auto;
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        .sub-greeting {
+            font-size: 26px;
+        }
+
+        .main-greeting {
+            font-size: 30px;
+        }
     }
 }

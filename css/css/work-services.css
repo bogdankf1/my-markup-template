@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$main-header-font".
-        on line 57 of sass/work-services.scss
+        on line 55 of sass/work-services.scss
 
-52:             .service-description-wrapper {
-53:                 flex: 5;
-54: 
-55:                 // Service title
-56:                 .service-title {
-57:                     font: bold 14px $main-header-font;
-58:                     text-transform: uppercase;
-59:                 }
-60: 
-61:                 // Service description text
-62:                 .service-description {
+50:                 flex: 1;
+51:                 margin-left: 10px;
+52: 
+53:                 // Service title
+54:                 .service-title {
+55:                     font: bold 14px $main-header-font;
+56:                     text-transform: uppercase;
+57:                 }
+58: 
+59:                 // Service description text
+60:                 .service-description {
 
 Backtrace:
-sass/work-services.scss:57
+sass/work-services.scss:55
 /home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/variable.rb:49:in `_perform'
 /home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/node.rb:50:in `perform'
 /home/user/.rvm/gems/ruby-2.4.1/gems/sass-3.5.6/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -117,4 +117,4 @@ sass/work-services.scss:57
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$main-header-font\".\A         on line 57 of sass/work-services.scss\A \A 52:             .service-description-wrapper {\A 53:                 flex: 5;\A 54: \A 55:                 // Service title\A 56:                 .service-title {\A 57:                     font: bold 14px $main-header-font;\A 58:                     text-transform: uppercase;\A 59:                 }\A 60: \A 61:                 // Service description text\A 62:                 .service-description {"; }
+  content: "Error: Undefined variable: \"$main-header-font\".\A         on line 55 of sass/work-services.scss\A \A 50:                 flex: 1;\A 51:                 margin-left: 10px;\A 52: \A 53:                 // Service title\A 54:                 .service-title {\A 55:                     font: bold 14px $main-header-font;\A 56:                     text-transform: uppercase;\A 57:                 }\A 58: \A 59:                 // Service description text\A 60:                 .service-description {"; }

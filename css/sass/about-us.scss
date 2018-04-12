@@ -40,13 +40,13 @@
     text-align: center;
     width: 100%;
     flex-flow: column nowrap;
-    padding: 0 100px;
+    
 
     // all content in 'about-us' section
     .about-us-content {
         /* Text content */
         .text-content {
-            padding: 0 50px;
+            padding: 0 150px;
             font: 15px $text-content-font;
             color: #999999;
             margin: 30px auto;
@@ -55,7 +55,7 @@
     
         /* Image content */
         .about-us-images-container {
-            
+            padding: 0 100px;
             display: flex;
             margin: 0 auto;
             margin-bottom: 50px;
@@ -84,7 +84,7 @@
             }
             // remove right margin from the last image in container
             .about-us-image-wrapper:last-of-type {
-                margin-right: 0;  
+                padding-right: 0;  
             }
     
             /* on hover actions: */
@@ -169,7 +169,8 @@
 
     // each item of infographic container
     .achievment-wrapper {
-        width: 90%;
+        width: 100%;
+        padding: 0 100px;
         height: 150px;
         display: flex;
         flex-flow: row nowrap;

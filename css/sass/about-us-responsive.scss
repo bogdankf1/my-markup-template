@@ -1,43 +1,27 @@
-
-// For smartphones
-@media (max-width:450px) {
+// For laptops
+@media (min-width: 769px) and (max-width: 1366px) {
     .about-us {
-        padding: 0 15px;
-    }
-    .about-us-content {
-        .about-us-images-container {
-            flex-flow: column wrap;
-            .about-us-image-wrapper:nth-of-type(n) {
-                margin-bottom: 20px;
-                padding-right: 0;
+        .about-us-content {
+            .text-content {
+                padding: 0 35px;
             }
-        }
 
-        .infographic {
-            .achievment-wrapper {
-                width: 80%;
-                flex-flow: column wrap;
-                height: 300px;
-
-                .achievment {
-                    display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    border: none;
-                    border-bottom: 1px solid white;
-
-                    .number {
-                        font-size: 40px;
-                        flex:1;
-                    }
-
-                    .title {
-                        flex:4;
-                        max-height: 20px;
-                    }
+            .about-us-images-container {
+                flex-flow: row wrap;
+                padding: 0 35px;
+                .about-us-image-wrapper {
+                    margin-bottom: 20px;
                 }
-                .achievment:last-of-type {
-                    border-bottom:none;
+            }
+    
+            .infographic {
+                .achievment-wrapper {  
+                    padding: 0 35px;              
+                    .achievment {
+                        .number {
+                            font-size: 50px;
+                        }
+                    }
                 }
             }
         }
@@ -45,23 +29,79 @@
 }
 
 // For tablets
-@media (min-width:450px) and (max-width:768px) {
-    .about-us-content {
-        .about-us-images-container {
-            flex-flow: row wrap;
-            .about-us-image-wrapper {
-                margin-bottom: 20px;
+@media (min-width:451px) and (max-width:768px) {
+    .about-us {
+        .about-us-content {
+            .text-content {
+                padding: 0 25px;
             }
-        }
 
-        .infographic {
-            .achievment-wrapper {                
-                .achievment {
-                    .number {
-                        font-size: 50px;
+            .about-us-images-container {
+                flex-flow: row wrap;
+                padding: 0 25px;
+                .about-us-image-wrapper {
+                    margin-bottom: 20px;
+                }
+            }
+    
+            .infographic {
+                .achievment-wrapper {  
+                    padding: 0 25px;              
+                    .achievment {
+                        .number {
+                            font-size: 50px;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+// For smartphones
+@media (max-width:450px) {
+    .about-us {
+        .about-us-content {
+            .text-content {
+                padding: 0 15px;
+            }
+            .about-us-images-container {
+                flex-flow: column wrap;
+                padding: 0 15px;
+                .about-us-image-wrapper:nth-of-type(n) {
+                    margin-bottom: 20px;
+                    padding-right: 0;
+                }
+            }
+    
+            .infographic {
+                .achievment-wrapper {
+                    padding: 0 15px;
+                    flex-flow: column wrap;
+                    height: 300px;
+    
+                    .achievment {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        border: none;
+                        border-bottom: 1px solid white;
+    
+                        .number {
+                            font-size: 40px;
+                            flex:1;
+                        }
+    
+                        .title {
+                            flex:4;
+                            max-height: 20px;
+                        }
+                    }
+                    .achievment:last-of-type {
+                        border-bottom:none;
+                    }
+                }
+            }
+        }
+    }  
 }

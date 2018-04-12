@@ -3,6 +3,7 @@ $main-header-font: 'Montserrat', sans-serif;
 $sub-header-font: 'Kaushan Script', cursive;
 $text-content-font: 'Roboto', sans-serif;
 
+// Reset setting for correct paddings
 * {
     box-sizing: border-box;
 }
@@ -27,7 +28,8 @@ $text-content-font: 'Roboto', sans-serif;
 
         // main page inner container
         .main-inner {
-            width: 90%;
+            width: 100%;
+            padding: 0 100px;
             height: 100vh;
             margin: 0 auto;
             position: relative;
@@ -57,7 +59,6 @@ $text-content-font: 'Roboto', sans-serif;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        min-width: 100px;
         justify-content: space-between;
 
         /* navigation links */
@@ -117,8 +118,7 @@ $text-content-font: 'Roboto', sans-serif;
         // navigation bar menu for mobile screens
         .mobile-nav-menu {
             position: relative;
-            display: inline-block;
-            opacity: 0;
+            display: none;
 
             // icon for mobile menu
             .mobile-menu-icon {
@@ -162,19 +162,21 @@ $text-content-font: 'Roboto', sans-serif;
                 }
 
                 // each element in menu list
-                a {
-                    color: black;
-                    font-size:24px;
-                    padding: 12px 16px;
-                    text-decoration: none;
-                    display: block;
-                    border-bottom: 1px solid #b8b8b8;
-                    margin-top: 20px;
-                    transition: .3s;
+                .mobile-menu-option {
+                    a {
+                        color: black;
+                        font-size:24px;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                        border-bottom: 1px solid #b8b8b8;
+                        margin-top: 20px;
+                        transition: .3s;
+                    }
                 }
 
                 // on hover action:
-                a:hover {
+                .mobile-menu-option:hover {
                     background-color: #f1f1f1;
                 }
             }
@@ -198,7 +200,7 @@ $text-content-font: 'Roboto', sans-serif;
     display: flex;
     flex-flow: column nowrap;
     margin: 0 auto;
-    width: 800px;
+    padding: 0 200px;
 
     /* sub-greeting with cursive text */
     .sub-greeting {
@@ -265,6 +267,7 @@ $text-content-font: 'Roboto', sans-serif;
     font-family: $main-header-font;
     text-transform: uppercase;
     font-weight: bold;
+    padding: 0 50px;
 
     // list of progress lines
     .progress-lines-list {
@@ -274,7 +277,8 @@ $text-content-font: 'Roboto', sans-serif;
 
         // progress bar item
         li {
-            width: 22%;
+            flex: 1;
+            padding-right: 30px;
 
             // progress list line
             .progress-line {
@@ -283,6 +287,9 @@ $text-content-font: 'Roboto', sans-serif;
                 margin-bottom:10px;
             }
         }
+        li:last-of-type {
+            padding-right: 0;
+        }
     }
 }
 
@@ -290,7 +297,6 @@ $text-content-font: 'Roboto', sans-serif;
 // adding classes for mobile menu
 .show-mobile-menu {
     width: 80%;
-    
 }
 
 .hide-mobile-menu {
@@ -307,8 +313,4 @@ $text-content-font: 'Roboto', sans-serif;
 
 .prevent-screen-scroll {
     overflow: hidden;
-}
-
-.allow-screen-scroll {
-    overflow: visible;
 }

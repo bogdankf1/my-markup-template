@@ -46,15 +46,17 @@
                                     <div class="menu-icon-line"></div>
                                     <div class="menu-icon-line"></div>
                                 </div>
-                                <div id="mobile-menu-content" class="mobile-menu-content hide-mobile-menu">
-                                    <div class="menu-header">MoGo</div>
-                                    <a href="#">About</a>
-                                    <a href="#">Service</a>
-                                    <a href="#">Work</a>
-                                    <a href="#">Blog</a>
-                                    <a href="#">Contact</a>
+                                <div class="mobile-menu-inner" id="mobile-menu-inner">
+                                    <div id="mobile-menu-content" class="mobile-menu-content hide-mobile-menu">
+                                        <div class="menu-header">MoGo</div>
+                                        <div class="mobile-menu-option"><a href="#">About</a></div>
+                                        <div class="mobile-menu-option"><a href="#">Service</a></div>
+                                        <div class="mobile-menu-option"><a href="#">Work</a></div>
+                                        <div class="mobile-menu-option"><a href="#">Blog</a></div>
+                                        <div class="mobile-menu-option"><a href="#">Contact</a></div>
+                                    </div>
+                                    <div id="mobile-menu-background" class="mobile-menu-background hide-mobile-menu-background"></div>
                                 </div>
-                                <div id="mobile-menu-background" class="mobile-menu-background hide-mobile-menu-background"></div>
                             </div> 
                         </div>
                     </header>
@@ -250,27 +252,29 @@
 
     <script>
         let menuOpened = false
-        document.getElementById('mobile-nav-menu').addEventListener('click', (e) => {
+        document.getElementById('mobile-nav-menu').addEventListener('click', (e) => {  
+            
+            if(!menuOpened) {
+                document.getElementById('mobile-menu-inner').classList.add('active')
+                menuOpened = true
+            } else if(menuOpened || e.target.id === 'mobile-nav-menu') {
+                document.getElementById('mobile-menu-inner').classList.remove('active')
+                menuOpened = false
+            }
+
             const menu = document.getElementById('mobile-menu-content'),
                   background = document.getElementById('mobile-menu-background')
-            if(!menuOpened) {
-                menu.classList.remove('hide-mobile-menu')
-                menu.classList.add('show-mobile-menu')
-                background.classList.remove('hide-mobile-menu-background')
-                background.classList.add('show-mobile-menu-background')
-                document.body.classList.remove('allow-screen-scroll')
+            if(document.getElementById('mobile-menu-inner').classList.contains('active')) {
+                menu.classList.replace('hide-mobile-menu', 'show-mobile-menu')
+                background.classList.replace('hide-mobile-menu-background', 'show-mobile-menu-background')
                 document.body.classList.add('prevent-screen-scroll')
-                menuOpened = true
-            } else if(menuOpened || e.target.id === 'mobile-menu-background'){
-                menu.classList.remove('show-mobile-menu')
-                menu.classList.add('hide-mobile-menu')
-                background.classList.remove('show-mobile-menu-background')
-                background.classList.add('hide-mobile-menu-background')
+            } else {
+                menu.classList.replace('show-mobile-menu', 'hide-mobile-menu')
+                background.classList.replace('show-mobile-menu-background', 'hide-mobile-menu-background')
                 document.body.classList.remove('prevent-screen-scroll')
-                document.body.classList.add('allow-screen-scroll')
-                menuOpened = false
-            }    
+            }
         })
+       
     </script>
 </body>
 </html>

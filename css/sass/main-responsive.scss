@@ -1,163 +1,215 @@
 // For large tablets and laptops
 @media (min-width:768px) and (max-width:1300px) {
-    .greeting-wrapper {
-        width: 80%;
-        margin-top:150px;
-        margin-bottom: 50px;
-
-        .sub-greeting {
-            font-size: 46px;
-        }
-
-        .main-greeting {
-            font-size: 50px;
+    .main {
+        .main-background {
+            .main-inner {
+                padding: 0 35px;
+                .greeting-wrapper {
+                    padding: 0 150px;
+                    margin-top:150px;
+                    margin-bottom: 50px;
+            
+                    .sub-greeting {
+                        font-size: 46px;
+                    }
+            
+                    .main-greeting {
+                        font-size: 50px;
+                    }
+                }
+            }
         }
     }
 }
 
 // For tablets
 @media (min-width:450px) and (max-width:767px) {
-    .main-inner {
-        position: relative;
-    }
-
-    .nav-bar-wrapper {
-        .nav-bar {
-            .nav-bar-list {
-                display:none;
+    .main {
+        .main-background {
+            .main-inner {
+                position: relative;
+                padding: 0 25px;
+                .nav-bar-wrapper {
+                    .nav-bar {
+                        .nav-bar-list {
+                            display:none;
+                        }
+            
+                        .mobile-nav-menu {
+                            display: inline-block;
+                        }
+                    }
+                }
+            
+                .greeting-wrapper {
+                    padding: 0 100px;
+                    margin-top:100px;
+                    margin-bottom: 50px;
+            
+                    .sub-greeting {
+                        font-size: 36px; 
+                    }
+            
+                    .main-greeting {
+                        font-size: 40px;
+                    }
+                }
+            
+                .learn-more-wrapper {
+                    margin-bottom: 80px;
+                }
+            
+                .progress-bar {
+                    display: none;
+                }
             }
-
-            .mobile-nav-menu {
-                opacity: 1;
-            }
         }
-    }
-
-    .greeting-wrapper {
-        width: 80%;
-        margin-top:100px;
-        margin-bottom: 50px;
-
-        .sub-greeting {
-            font-size: 36px; 
-        }
-
-        .main-greeting {
-            font-size: 40px;
-        }
-    }
-
-    .learn-more-wrapper {
-        margin-bottom: 80px;
-    }
-
-    .progress-bar {
-        display: none;
-    }
+    }    
 }
 
 // For smartphones
 @media (min-width:321px) and (max-width:449px) {
-    .nav-bar-wrapper {
-        .nav-bar {
-            .nav-bar-list {
-                display:none;
+    .main {
+        .main-background {
+            .main-inner {
+                padding: 0 15px;
+                .nav-bar-wrapper {
+                    .nav-bar {
+                        .nav-bar-list {
+                            display:none;
+                        }
+            
+                        .mobile-nav-menu {
+                            display: inline-block;
+                        }
+                    }
+                }
+            
+                .greeting-wrapper {
+                    padding: 0 50px;
+                    margin-top:100px;
+                    margin-bottom: 50px;
+                    
+                    .sub-greeting {
+                        font-size: 26px;
+                    }
+            
+                    .main-greeting {
+                        font-size: 32px;
+                    }
+                }
+            
+                .learn-more-wrapper {
+                    flex: 1;
+                    margin-bottom: 80px;
+                }
+            
+                .progress-bar {
+                    display: none;
+                }
             }
-
-            .mobile-nav-menu {
-                opacity: 1;
-            }
         }
-    }
-
-    .greeting-wrapper {
-        width: 80%;
-        margin-top:100px;
-        margin-bottom: 50px;
-        
-        .sub-greeting {
-            font-size: 26px;
-        }
-
-        .main-greeting {
-            font-size: 30px;
-        }
-    }
-
-    .learn-more-wrapper {
-        flex: 1;
-        margin-bottom: 80px;
-    }
-
-    .progress-bar {
-        display: none;
     }
 }
 
 
 // For small mobile screens
 @media (max-width:320px) {
-    .nav-bar-wrapper {
-        .title {
-            font-size: 25px;
-        }
-
-        .nav-bar {
-            .nav-bar-list {
-                display:none;
+    .main {
+        .main-background {
+            .main-inner {
+                padding: 0 10px;
+                .nav-bar-wrapper {
+                    .title {
+                        font-size: 25px;
+                    }
+            
+                    .nav-bar {
+                        .nav-bar-list {
+                            display:none;
+                        }
+            
+                        .mobile-nav-menu {
+                            display: inline-block;
+                        }
+                    }
+                }
+            
+                .greeting-wrapper {
+                    padding: 0 25px;
+                    margin-top:50px;
+                    margin-bottom: 50px;
+                    
+                    .sub-greeting {
+                        font-size: 26px;
+                    }
+            
+                    .main-greeting {
+                        font-size: 30px;
+                    }
+                }
+            
+                .progress-bar {
+                    display: none;
+                }
             }
-
-            .mobile-nav-menu {
-                opacity: 1;
-            }
         }
-    }
-
-    .greeting-wrapper {
-        width: 80%;
-        margin-top:50px;
-        margin-bottom: 50px;
-        
-        .sub-greeting {
-            font-size: 26px;
-        }
-
-        .main-greeting {
-            font-size: 30px;
-        }
-    }
-
-    .progress-bar {
-        display: none;
     }
 }
 
 // For smartphones in album-orientation
 @media (max-height:650px) {
-    .greeting-wrapper {
-        margin-top: 100px;
-        .sub-greeting {
-            font-size: 30px;
-        }
-
-        .main-greeting {
-            font-size: 40px;
+    .main {
+        .main-background {
+            .main-inner {
+                .greeting-wrapper {
+                    margin-top: 100px;
+                    margin-bottom: 50px;
+                    .sub-greeting {
+                        font-size: 30px;
+                    }
+            
+                    .main-greeting {
+                        font-size: 40px;
+                    }
+                }
+            }
         }
     }
 }
 @media (max-height:450px) {
-    .greeting-wrapper {
-        width: 80%;
-        margin:0 auto;
-        margin-top: 0;
-        margin-bottom: 20px;
-
-        .sub-greeting {
-            font-size: 26px;
-        }
-
-        .main-greeting {
-            font-size: 30px;
+    .main {
+        .main-background {
+            .main-inner {
+                .nav-bar-wrapper {
+                    .nav-bar {
+                        .nav-bar-list {
+                            display:none;
+                        }
+            
+                        .mobile-nav-menu {
+                            display: inline-block;
+                        }
+                    }
+                }
+                .greeting-wrapper {
+                    padding: 0 75px;
+                    margin:0 auto;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+            
+                    .sub-greeting {
+                        font-size: 26px;
+                    }
+            
+                    .main-greeting {
+                        font-size: 30px;
+                    }
+                }
+                .progress-bar {
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -1,36 +1,53 @@
+@media (min-width: 769px) and (max-width: 1366px) {
+  .about-us .about-us-content .text-content {
+    padding: 0 35px; }
+  .about-us .about-us-content .about-us-images-container {
+    flex-flow: row wrap;
+    padding: 0 35px; }
+    .about-us .about-us-content .about-us-images-container .about-us-image-wrapper {
+      margin-bottom: 20px; }
+  .about-us .about-us-content .infographic .achievment-wrapper {
+    padding: 0 35px; }
+    .about-us .about-us-content .infographic .achievment-wrapper .achievment .number {
+      font-size: 50px; } }
+@media (min-width: 451px) and (max-width: 768px) {
+  .about-us .about-us-content .text-content {
+    padding: 0 25px; }
+  .about-us .about-us-content .about-us-images-container {
+    flex-flow: row wrap;
+    padding: 0 25px; }
+    .about-us .about-us-content .about-us-images-container .about-us-image-wrapper {
+      margin-bottom: 20px; }
+  .about-us .about-us-content .infographic .achievment-wrapper {
+    padding: 0 25px; }
+    .about-us .about-us-content .infographic .achievment-wrapper .achievment .number {
+      font-size: 50px; } }
 @media (max-width: 450px) {
-  .about-us {
+  .about-us .about-us-content .text-content {
     padding: 0 15px; }
-
-  .about-us-content .about-us-images-container {
-    flex-flow: column wrap; }
-    .about-us-content .about-us-images-container .about-us-image-wrapper:nth-of-type(n) {
+  .about-us .about-us-content .about-us-images-container {
+    flex-flow: column wrap;
+    padding: 0 15px; }
+    .about-us .about-us-content .about-us-images-container .about-us-image-wrapper:nth-of-type(n) {
       margin-bottom: 20px;
       padding-right: 0; }
-  .about-us-content .infographic .achievment-wrapper {
-    width: 80%;
+  .about-us .about-us-content .infographic .achievment-wrapper {
+    padding: 0 15px;
     flex-flow: column wrap;
     height: 300px; }
-    .about-us-content .infographic .achievment-wrapper .achievment {
+    .about-us .about-us-content .infographic .achievment-wrapper .achievment {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
       border: none;
       border-bottom: 1px solid white; }
-      .about-us-content .infographic .achievment-wrapper .achievment .number {
+      .about-us .about-us-content .infographic .achievment-wrapper .achievment .number {
         font-size: 40px;
         flex: 1; }
-      .about-us-content .infographic .achievment-wrapper .achievment .title {
+      .about-us .about-us-content .infographic .achievment-wrapper .achievment .title {
         flex: 4;
         max-height: 20px; }
-    .about-us-content .infographic .achievment-wrapper .achievment:last-of-type {
+    .about-us .about-us-content .infographic .achievment-wrapper .achievment:last-of-type {
       border-bottom: none; } }
-@media (min-width: 450px) and (max-width: 768px) {
-  .about-us-content .about-us-images-container {
-    flex-flow: row wrap; }
-    .about-us-content .about-us-images-container .about-us-image-wrapper {
-      margin-bottom: 20px; }
-  .about-us-content .infographic .achievment-wrapper .achievment .number {
-    font-size: 50px; } }
 
 /*# sourceMappingURL=about-us-responsive.css.map */
